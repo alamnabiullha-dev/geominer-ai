@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+models/*.joblib
+datasets/synthetic_survey_data.csv
+.env

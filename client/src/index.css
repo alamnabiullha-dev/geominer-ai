@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #0F172A;
+  }
+  ::selection {
+    background-color: rgba(37, 99, 235, 0.35);
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #2563EB33 transparent;
+  }
+  *:focus-visible {
+    outline: 2px solid #2563EB;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface-100/60 backdrop-blur-xl border border-surface-border rounded-2xl shadow-card;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-medium px-5 py-2.5 transition-all duration-200 shadow-glow hover:shadow-none active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-surface-100 hover:bg-surface-200 border border-surface-border text-slate-200 font-medium px-5 py-2.5 transition-all duration-200 active:scale-[0.98];
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-accent-600 hover:bg-accent-400 text-white font-medium px-5 py-2.5 transition-all duration-200 shadow-glow-green active:scale-[0.98];
+  }
+  .input-field {
+    @apply w-full rounded-xl bg-surface-200 border border-surface-border px-4 py-2.5 text-sm text-slate-100 placeholder:text-slate-500 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none transition-colors;
+  }
+  .section-eyebrow {
+    @apply text-xs font-mono uppercase tracking-[0.2em] text-accent-400;
+  }
+}
